@@ -13,7 +13,6 @@ UVRPainter_ColorPicker::UVRPainter_ColorPicker()
 	// ...
 }
 
-
 // Called when the game starts
 void UVRPainter_ColorPicker::BeginPlay()
 {
@@ -23,7 +22,6 @@ void UVRPainter_ColorPicker::BeginPlay()
 	
 }
 
-
 // Called every frame
 void UVRPainter_ColorPicker::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
@@ -32,18 +30,19 @@ void UVRPainter_ColorPicker::TickComponent(float DeltaTime, ELevelTick TickType,
 	// ...
 }
 
-FLinearColor UVRPainter_ColorPicker::ColorPickerWheel(float Xaxis, float Yaxis) {
+FLinearColor UVRPainter_ColorPicker::ColorPickerWheel(float Xaxis, float Yaxis, float Value) {
 	XAxis = Xaxis;
-	YAxis = Yaxis;
+	YAxis = Yaxis * -1.f;
+	InValue = Value;
 	float  Degree = UKismetMathLibrary::DegAtan2(XAxis, YAxis);
-	UE_LOG(LogTemp, Warning, TEXT("%f"), Degree);
+	//UE_LOG(LogTemp, Warning, TEXT("%f"), Degree);
 	FVector2D CurrentVector = FVector2D(XAxis, YAxis);
 
 	if (Degree < 0) {
 		PickedColor = UKismetMathLibrary::HSVToRGB(
 			UKismetMathLibrary::MapRangeClamped(Degree, -180.f, 0.f, 180.f, 360.f),
 			CurrentVector.Size(),
-			1.f,
+			UKismetMathLibrary::FClamp(InValue, 0.f, 1.f),
 			1.f
 		);
 	}
@@ -52,7 +51,7 @@ FLinearColor UVRPainter_ColorPicker::ColorPickerWheel(float Xaxis, float Yaxis) 
 		PickedColor = UKismetMathLibrary::HSVToRGB(
 			Degree,
 			CurrentVector.Size(),
-			1.f,
+			UKismetMathLibrary::FClamp(InValue, 0.f, 1.f),
 			1.f
 		);
 	}

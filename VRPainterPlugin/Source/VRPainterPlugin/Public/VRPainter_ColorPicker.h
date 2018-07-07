@@ -28,11 +28,12 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(BlueprintCallable, Category = "ColorPicker")
-	FLinearColor ColorPickerWheel(float Xaxis, float Yaxis);
+	FLinearColor ColorPickerWheel(float Xaxis, float Yaxis, float Value);
 
 private:
-	float XAxis = 0;
-	float YAxis = 0;
+	float XAxis = 0.f;
+	float YAxis = 0.f;
+	float InValue = 0.f;
 
 	FLinearColor PickedColor;
 };

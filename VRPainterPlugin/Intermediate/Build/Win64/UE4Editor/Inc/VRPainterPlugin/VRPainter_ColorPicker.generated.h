@@ -20,9 +20,10 @@ struct FLinearColor;
 	{ \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Xaxis); \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Yaxis); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FLinearColor*)Z_Param__Result=this->ColorPickerWheel(Z_Param_Xaxis,Z_Param_Yaxis); \
+		*(FLinearColor*)Z_Param__Result=this->ColorPickerWheel(Z_Param_Xaxis,Z_Param_Yaxis,Z_Param_Value); \
 		P_NATIVE_END; \
 	}
 
@@ -33,9 +34,10 @@ struct FLinearColor;
 	{ \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Xaxis); \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_Yaxis); \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_Value); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FLinearColor*)Z_Param__Result=this->ColorPickerWheel(Z_Param_Xaxis,Z_Param_Yaxis); \
+		*(FLinearColor*)Z_Param__Result=this->ColorPickerWheel(Z_Param_Xaxis,Z_Param_Yaxis,Z_Param_Value); \
 		P_NATIVE_END; \
 	}
 

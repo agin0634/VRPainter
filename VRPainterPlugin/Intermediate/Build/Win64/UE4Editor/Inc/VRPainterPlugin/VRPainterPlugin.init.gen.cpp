@@ -20,7 +20,7 @@ void EmptyLinkFunctionForGeneratedCodeVRPainterPlugin_init() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/VRPainterPlugin")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0xFE16F67E;
+			Guid.A = 0x4438F380;
 			Guid.B = 0x1AB082C0;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;

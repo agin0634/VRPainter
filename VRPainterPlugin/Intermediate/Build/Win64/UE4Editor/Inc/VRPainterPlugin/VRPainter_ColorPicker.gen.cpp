@@ -35,6 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeVRPainter_ColorPicker() {}
 		{
 			float Xaxis;
 			float Yaxis;
+			float Value;
 			FLinearColor ReturnValue;
 		};
 		UObject* Outer = Z_Construct_UClass_UVRPainter_ColorPicker();
@@ -43,6 +44,7 @@ void EmptyLinkFunctionForGeneratedCodeVRPainter_ColorPicker() {}
 		{
 			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("ColorPickerWheel"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), nullptr, (EFunctionFlags)0x04820401, 65535, sizeof(VRPainter_ColorPicker_eventColorPickerWheel_Parms));
 			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UStructProperty(CPP_PROPERTY_BASE(ReturnValue, VRPainter_ColorPicker_eventColorPickerWheel_Parms), 0x0010000000000580, Z_Construct_UScriptStruct_FLinearColor());
+			UProperty* NewProp_Value = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Value"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(Value, VRPainter_ColorPicker_eventColorPickerWheel_Parms), 0x0010000000000080);
 			UProperty* NewProp_Yaxis = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Yaxis"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(Yaxis, VRPainter_ColorPicker_eventColorPickerWheel_Parms), 0x0010000000000080);
 			UProperty* NewProp_Xaxis = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("Xaxis"), RF_Public|RF_Transient|RF_MarkAsNative) UFloatProperty(CPP_PROPERTY_BASE(Xaxis, VRPainter_ColorPicker_eventColorPickerWheel_Parms), 0x0010000000000080);
 			ReturnFunction->Bind();
@@ -74,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodeVRPainter_ColorPicker() {}
 
 				OuterClass->LinkChild(Z_Construct_UFunction_UVRPainter_ColorPicker_ColorPickerWheel());
 
-				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UVRPainter_ColorPicker_ColorPickerWheel(), "ColorPickerWheel"); // 1253965236
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UVRPainter_ColorPicker_ColorPickerWheel(), "ColorPickerWheel"); // 2758677372
 				static TCppClassTypeInfo<TCppClassTypeTraits<UVRPainter_ColorPicker> > StaticCppClassTypeInfo;
 				OuterClass->SetCppTypeInfo(&StaticCppClassTypeInfo);
 				OuterClass->StaticLink();
@@ -91,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeVRPainter_ColorPicker() {}
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UVRPainter_ColorPicker, 3663217102);
+	IMPLEMENT_CLASS(UVRPainter_ColorPicker, 3841881328);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UVRPainter_ColorPicker(Z_Construct_UClass_UVRPainter_ColorPicker, &UVRPainter_ColorPicker::StaticClass, TEXT("/Script/VRPainterPlugin"), TEXT("UVRPainter_ColorPicker"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UVRPainter_ColorPicker);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
